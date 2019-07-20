@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+  <title>Home | Stone Compass Associates</title>
+  <link type="text/css" rel="stylesheet" media="all" href="stylesheet1.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet2.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet3.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet4.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet5.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet6.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet7.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet8.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet9.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet10.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet11.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet12.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet13.css" />
+<link type="text/css" rel="stylesheet" media="all" href="stylesheet14.css" />
+<link type="text/css" rel="stylesheet" media="print" href="stylesheet115.css" />
+  <script type="text/javascript" src="script1.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+<script type="text/javascript" src="script2.min.js"></script>
+<script type="text/javascript" src="script3.min.js"></script>
+<!--[if lt IE 7]>
+        <script type="text/javascript" src="/sites/all/themes/blueavenueassociates/scripts/unitpngfix.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function(){
+
+	var setupSelectors = function() {
+		$currentString = '.fp-art-img-' + $current;
+		$nextString = '.fp-art-img-' + $next;
+
+		$currentSel = $($currentString);
+		$nextSel = $($nextString);
+
+		// Title selectors
+		$currentTitleString = '.fp-title-' + $current;
+		$nextTitleString = '.fp-title-' + $next;
+		$currentTitle = $($currentTitleString);
+		$nextTitle = $($nextTitleString);
+
+		// Summary selectors
+		$currentSumString = '.fp-summary-' + $current;
+		$nextSumString = '.fp-summary-' + $next;
+		$currentSum = $($currentSumString);
+		$nextSum = $($nextSumString);
+
+		// Setup indicator position and height
+		$indicString = '.fp-nav-item-' + $next;
+		$indicSel = $($indicString);
+		$position = $indicSel.position();
+		$height = $indicSel.height() + 20;
+	}
+
+	var setupNext = function(a) {
+		switch(a) {
+			case 0:
+				if ($next == '3') {
+					$current = 3;
+					$next = 1;
+				}
+				else {
+					$current = $next;
+					$next = $next + 1;
+				}
+			break;
+			case 1:
+			break;
+			case 2:
+			break;
+			case 3:
+			break;
+		}
+		setupSelectors();
+	}
+
+	var switchArticle = function() {
+		$currentSel.css('z-index', '-2').fadeOut(1000);
+		$nextSel.show().css({'z-index':'-5', 'opacity':'1'})
+
+		// Title fades
+		$currentTitle.fadeOut(1000);
+		$nextTitle.fadeIn(1000);
+
+		// Summary fades
+		$currentSum.animate(
+			{opacity:0, left:'20px'},
+			800
+		);
+		$nextSum.show().css({'opacity':0}).animate({opacity:0.9, left:'265px'}, 800);
+
+		$indic.animate({top:$position.top, height:$height}, 500);
+
+		setupNext(0);
+	}
+
+	// Starting variables and setup
+	$current = 1;
+	$next = 2;
+	setupSelectors();
+
+	$indic = $('.fp-nav-highlighter');
+
+	$('.fp-title-2').hide();
+	$('.fp-title-3').hide();
+	$('.fp-summary-1').css({'left' : '265px', 'opacity' : '0.9'});
+	$('.fp-summary-2').hide();
+	$('.fp-summary-3').hide();
+	$('.fp-art-img-2').hide();
+	$('.fp-art-img-3').hide();
+
+
+	// Timer function
+	setInterval(switchArticle, 4000);
+
+});
+</script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<head>
+<!--[if IE]><link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/blueavenueassociates/fix-ie.css?K" /> <![endif]-->
+</head>
+
+<div id="header-region">
+    <div id="header-container">
+
+        <div id="logo">
+
+            <a href="/"><img src="logo.png" height="50" width="191" alt="Stone Compass Associates" border="none"/></a>
+
+        </div>
+
+        <div id="navigation-region">
+
+            <div id="block-nice_menus-1" class="clear-block block block-nice_menus">
+
+
+  <div class="content"><ul class="nice-menu nice-menu-down" id="nice-menu-1"><li id="menu-182" class="menuparent menu-path-node-11"><a href="/about-us" title="About Us">About Us</a><ul><li id="menu-184" class="menu-path-node-12"><a href="/about-us/company-profile" title="Our Approach">Our Approach</a></li>
+<li id="menu-186" class="menu-path-node-13"><a href="/about-us/corporate-responsibility" title="Corporate Responsibility">Corporate Responsibility</a></li>
+</ul>
+</li>
+<li id="menu-188" class="menuparent menu-path-node-14"><a href="/services" title="Services">Services</a><ul><li id="menu-189" class="menu-path-node-15"><a href="/services/taxation" title="Taxation">Taxation</a></li>
+<li id="menu-199" class="menu-path-node-19"><a href="/services/incorporation-services" title="Incorporation">Incorporation Services</a></li>
+<li id="menu-203" class="menu-path-node-22"><a href="/services/accounting-payroll" title="Accounting &amp; Payroll">Accounting &amp; Payroll</a></li>
+<li id="menu-207" class="menu-path-node-24"><a href="/services/systems-processes-assurance" title="Systems, Processes &amp; Assurance">Systems, Processes &amp; Assurance</a></li>
+<li id="menu-209" class="menu-path-node-25"><a href="/services/business-advisory" title="Business Advisory">Business Advisory</a></li>
+<li id="menu-767" class="menu-path-node-116"><a href="/outbound-investment" title="Outbound Investment">Outbound Investment</a></li>
+</ul>
+</li>
+<li id="menu-211" class="menuparent menu-path-node-26"><a href="/market-intelligence" title="Market Intelligence">Market Intelligence</a><ul><li id="menu-219" class="menuparent menu-path-node-30"><a href="/market-intelligence/features-mainland-china" title="Features of Mainland China">Features of Mainland China</a><ul><li id="menu-406" class="menu-path-node-54"><a href="/market-intelligence/doing-business-china/government-mainland-china" title="The Government of Mainland China">The Government of Mainland China</a></li>
+<li id="menu-410" class="menu-path-node-56"><a href="/market-intelligence/doing-business-china/legal-and-accounting-environment" title="Legal and Accounting Environment">Legal and Accounting Environment</a></li>
+<li id="menu-412" class="menu-path-node-57"><a href="/market-intelligence/doing-business-china/control-foreign-investment" title="Control on Foreign Investment">Control on Foreign Investment</a></li>
+<li id="menu-416" class="menu-path-node-59"><a href="/market-intelligence/doing-business-china/incentives-business-activities" title="Incentives for Business Activities">Incentives for Business Activities</a></li>
+<li id="menu-418" class="menu-path-node-60"><a href="/market-intelligence/features-mainland-china/taxation" title="Taxation">Taxation</a></li>
+<li id="menu-420" class="menu-path-node-61"><a href="/market-intelligence/doing-business-china/new-prc-enterprise-bankruptcy-law" title="PRC Enterprise Bankruptcy Law">PRC Enterprise Bankruptcy Law</a></li>
+<li id="menu-422" class="menu-path-node-62"><a href="/market-intelligence/doing-business-china/new-prc-labour-contract-law" title="PRC Labor Contract Law">PRC Labor Contract Law</a></li>
+</ul>
+</li>
+<li id="menu-429" class="menuparent menu-path-node-65"><a href="/market-intelligence/doing-business-china" title="Doing Business in China">Doing Business in China</a><ul><li id="menu-432" class="menu-path-node-66"><a href="/market-intelligence/doing-business-china/opportunities" title="Opportunities">Opportunities</a></li>
+<li id="menu-434" class="menu-path-node-67"><a href="/market-intelligence/doing-business-china/challenges" title="Challenges">Challenges</a></li>
+<li id="menu-436" class="menu-path-node-68"><a href="/market-intelligence/doing-business-china/strategy" title="Strategy">Strategy</a></li>
+<li id="menu-438" class="menu-path-node-69"><a href="/market-intelligence/doing-business-china/why-establish-presence" title="Why establish a presence?">Why establish a presence?</a></li>
+</ul>
+</li>
+<li id="menu-811" class="menu-path-node-128"><a href="/what-china%E2%80%99s-belt-and-road-initiative-bri-%E2%80%93-briefing-and-understanding" title="What is China’s Belt and Road Initiative (BRI) – a briefing and understanding">Belt and Road Initiative (BRI)</a></li>
+<li id="menu-223" class="menu-path-node-31"><a href="/market-intelligence/doing-business-hong-kong" title="Doing Business in Hong Kong">Doing Business in Hong Kong</a></li>
+</ul>
+</li>
+<li id="menu-213" class="menuparent menu-path-node-27"><a href="/insight-resources" title="Insight &amp; Resources">Insight &amp; Resources</a><ul><li id="menu-229" class="menu-path-node-35"><a href="/insight-resources/useful-links" title="Useful Links">Useful Links</a></li>
+<li id="menu-233" class="menuparent menu-path-node-37"><a href="/insight-resources/online-resource-center" title="Online Resource Center">Online Resource Center</a><ul><li id="menu-806" class="menu-path-node-124"><a href="/insight-resources/online-resource-center/tax-updates/2019-new-iit-law-%E2%80%93-changes-impacting-expatriate" title="2019 NEW IIT LAW – CHANGES IMPACTING EXPATRIATED EMPLOYEES">2019 NEW IIT LAW – CHANGES IMPACTING EXPATRIATED EMPLOYEES</a></li>
+<li id="menu-804" class="menu-path-node-123"><a href="/insight-resources/online-resource-center/tax-updates/2019-new-iit-law-%E2%80%93-personal-data-submission-and" title="2019 new IIT law – personal data submission and tax ID number">2019 new IIT law – personal data submission and tax ID number</a></li>
+<li id="menu-809" class="menu-path-node-127"><a href="/insight-resources/online-resource-center/tax-updates/china-%E2%80%93-2019-lower-vat-rates-announced" title="CHINA – 2019 LOWER VAT RATES ANNOUNCED">CHINA – 2019 LOWER VAT RATES ANNOUNCED</a></li>
+<li id="menu-807" class="menu-path-node-125"><a href="/insight-resources/online-resource-center/tax-updates/new-tax-brackets-and-special-itemized-deduction" title="NEW TAX BRACKETS AND SPECIAL ITEMIZED DEDUCTIONS UNDER THE NEW IIT LAW">NEW TAX BRACKETS AND SPECIAL ITEMIZED DEDUCTIONS UNDER THE NEW IIT LAW</a></li>
+</ul>
+</li>
+<li id="menu-235" class="menu-path-node-38"><a href="/insight-resources/brochure-information-pack" title="Brochure &amp; Information Pack">Brochure &amp; Information Pack</a></li>
+</ul>
+</li>
+<li id="menu-748" class="menuparent menu-path-node-111"><a href="/careers-0" title="Careers">Careers</a><ul><li id="menu-750" class="menu-path-node-112"><a href="/careers" title="Careers">Careers</a></li>
+</ul>
+</li>
+<li id="menu-217" class="menuparent menu-path-node-29"><a href="/contact-us" title="Contact">Contact</a><ul><li id="menu-464" class="menu-path-contact"><a href="/contact" title="">Inquiries</a></li>
+<li id="menu-241" class="menu-path-node-41"><a href="/contact/e-mail-us" title="E-mail Us">E-mail Us</a></li>
+<li id="menu-743" class="menuparent menu-path-node-108"><a href="/locations" title="Locations1">Locations</a><ul><li id="menu-745" class="menu-path-node-109"><a href="/beijing" title="Beijing1">Beijing</a></li>
+<li id="menu-752" class="menu-path-node-113"><a href="/shanghai" title="Shanghai1">Shanghai</a></li>
+<li id="menu-754" class="menu-path-node-114"><a href="/hong-kong" title="Hong Kong1">Hong Kong</a></li>
+</ul>
+</li>
+<li id="menu-725" class="menu-path-node-87"><a href="/legal-disclaimer" title="Legal Disclaimer">Legal Disclaimer</a></li>
+<li id="menu-723" class="menu-path-node-64"><a href="/privacy-statement" title="Privacy Statement">Privacy Statement</a></li>
+</ul>
+</li>
+<li id="menu-805" class="menu-path-node-81"><a href="/insight-resources/online-resource-center/tax-updates" title="Tax Updates">2019 new IIT law – personal data submission and tax ID number</a></li>
+</ul>
+</div>
+</div>
+        </div>
+
+        <div id="access-panel">
+
+            <div id="block-search-0" class="clear-block block block-search">
+
+
+  <div class="content"><form action="/"  accept-charset="UTF-8" method="post" id="search-block-form">
+<div><div class="container-inline">
+  <div class="form-item" id="edit-search-block-form-1-wrapper">
+ <label for="edit-search-block-form-1">Search this site: </label>
+ <input type="text" maxlength="128" name="search_block_form" id="edit-search-block-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_build_id" id="form-056d3fd48da8b9fdbf6be3a9eddf5dbc" value="form-056d3fd48da8b9fdbf6be3a9eddf5dbc"  />
+<input type="hidden" name="form_id" id="edit-search-block-form" value="search_block_form"  />
+</div>
+
+</div></form>
+</div>
+</div>
+
+        </div>
+
+    </div>
+</div>
+<div class="header-shadow"></div>
+
+
+<!-- Layout -->
+	<div id="body-region">
+    	<div id="body-container">
+
+			            <div id="sidebar-right">
+
+            	<div class="sidebar-section">
+<div class="welcome-message">Welcome to Stone Compass Associates</div><div class="login-box"><form action="/home?destination=node%2F10"  accept-charset="UTF-8" method="post" id="user-login-form">
+<div><div class="login-field login-field-first"><div class="form-item" id="edit-name-wrapper">
+ <label for="edit-name">E-mail: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" maxlength="60" name="name" id="edit-name" size="16" value="" class="form-text required" />
+</div>
+</div><div class="login-field"><div class="form-item" id="edit-pass-wrapper">
+ <label for="edit-pass">Password: <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" name="pass" id="edit-pass"  maxlength="60"  size="16"  class="form-text required" />
+</div>
+</div><div class="login-submit"><div style="float:left"><a href="/user/password">Forgot your password?</a></div><input type="submit" name="op" id="edit-submit-2" value="Log in"  class="form-submit" />
+</div><input type="hidden" name="form_build_id" id="form-7ba232b9ad869293b1e9f8a1dbe039d4" value="form-7ba232b9ad869293b1e9f8a1dbe039d4"  />
+<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />
+
+</div></form>
+</div>Not a member? Register for free <a href="/user/register">here</a>.</div>
+
+<div class="sidebar-section">
+	<div class="sidebar-tax-header">Tax Updates</div>
+    <div class="sidebar-tax-item">
+    	CHINA – 2019 LOWER VAT RATES ANNOUNCED<br><a href="/node/127" style="display:block; margin-top:3px; text-align:right;">view update >></a>    </div>
+</div>
+
+<div class="sidebar-section">
+	<div class="sidebar-header">Locations</div>
+  <img src="locations.jpg" />
+  <div style="margin-top:5px;  padding-bottom:5px; ">Click <a href="/locations">here</a> for our location information.</div>
+</div>
+
+<div class="sidebar-section" style="background-color:#FFFFFF; padding:13px; color:#484848;">
+	<div class="sidebar-header">Brochure and Information Pack</div>
+ 	<img src="brochure.jpg" />
+  <div style="margin-top:5px;">
+  Our brochures are made available to download for easy viewing.
+  <div class="rome_bj" style="text-align:right;"><a href="/insight-resources/brochure-information-pack">Download</a></div>
+  </div>
+</div>
+
+
+
+            </div>
+
+            <div id="content">
+
+            	<div class="fp-container">
+
+                    <div class="fp-art-img fp-art-img-1"> <img src="/picture1.jpg" /></div><div class="fp-art-img fp-art-img-2"> <img src="1.jpeg" /></div><div class="fp-art-img fp-art-img-3"> <img src="picture2.jpg" /></div>
+                    <div class="fp-title fp-title-1">The Objectives and Benefits of an Internal Audit</div><div class="fp-title fp-title-2">The Importance of a Good Information Management System</div><div class="fp-title fp-title-3">Whether to migrate operations to China</div>                    <div class="fp-summary fp-summary-1">Managing risks from within
+<a href="/insight-resources/online-resource-center/insights/objectives-and-benefits-internal-audit" style="margin-top:5px; display:block;">Go to article >></a></div><div class="fp-summary fp-summary-2">How good organization can help optimize your business
+<a href="/insight-resources/online-resource-center/insights/importance-good-information-management-system" style="margin-top:5px; display:block;">Go to article >></a></div><div class="fp-summary fp-summary-3">Important facts to consider when entering the China market
+<a href="/insight-resources/online-resource-center/insights/whether-migrate-operations-china" style="margin-top:5px; display:block;">Go to article >></a></div>                    <div class="fp-navbj">
+                    <div class="fp-nav-highlighter"></div>
+                    <div class="fp-nav">
+                    	<a class="fp-nav-item fp-nav-item-1" >The Objectives and Benefits of an Internal Audit</a><a class="fp-nav-item fp-nav-item-2" >The Importance of a Good Information Management System</a><a class="fp-nav-item fp-nav-item-3" >Whether to migrate operations to China</a>                    </div>
+
+
+                	</div>
+                </div>
+
+                <div class="fp-boxes">
+
+               	  <div class="fp-box fp-box-first">
+              			<h3>Why establish a presence?</h3>
+                      <p>Although processes for establishing a presence have become easier, it is far from being as convenient or straightforward as setting up in Hong Kong or other developed markets; some industries are still restricted to foreign invested enterprises and the time frame for completing the procedures starts from two to three months compared to Hong Kong and the UK's one or two weeks.</p>
+                      <div class="rome_bj"><a href="/market-intelligence/doing-business-china/why-establish-presence">Continue reading...</a></div>
+                	</div>
+                    <div class="fp-box">
+                	<h3>Who we are</h3>
+                        <p>Stone Compass Associates is an independent accounting and business driven consultancy that uses specialist resources to deliver integrated business solutions to companies in China.</p>
+
+                        <p>We provide a wide range of consulting, company formation and outsourcing services to organizations currently operating or looking to operate in China and Hong Kong. Our services are managed by an international and experienced team of consultants and specialists who work at our Beijing and Shanghai offices.</p>
+                        <div class="rome_bj"><a href="/about-us">More on Stone Compass Associates...</a></div>
+                	</div>
+                </div>
+
+        	</div>
+
+        </div>
+    </div>
+
+	<div class="push"></div>
+</div>
+
+<div class="footer-shadow">
+
+    <div class="footer-shadow-box"></div>
+
+	<div id="footer-region"><div id="footer">
+
+        <div style="float:left;"><strong>&copy; 2020 Stone Compass Associates</strong><br /><br />
+          <span style="font-weight:normal;">
+            <a href="/privacy-statement">Privacy</a> |
+            <a href="/legal-disclaimer">Legal Disclaimer</a>
+          </span>
+        </div>
+
+        <div style="float:right; width:298px; ">
+            <strong>Contact</strong><br /><br />
+            Our Locations<br />
+						Make an Inquiry
+        </div>
+
+        <div style="float:right; width:298px;  margin-right:20px; ">
+            <strong>Information</strong><br /><br />
+            Online Resource Center<br />
+            Brochure and Information Pack<br />
+            Services
+        </div>
+
+	</div></div>
+
+</div>
+
+
+</body>
+</html>
